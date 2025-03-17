@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: #222;
+    font-family: "Montserrat", sans-serif;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 16px;
+    color: #fff;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #555;
+    color: white;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+.orders-table {
+    margin-top: 30px;
+}
+
+.orders-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #444;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.orders-table th, .orders-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #555;
+}
+
+.orders-table th {
+    background-color: #28a745;
+    color: white;
+}
+
+.orders-table td {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .orders-table table {
+        font-size: 14px;
+    }
+
+    .orders-table th, .orders-table td {
+        padding: 8px;
+    }
+}

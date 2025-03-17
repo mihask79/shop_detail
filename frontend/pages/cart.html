@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="style/style_cart.css">
+</head>
+<body>
+    <header class="header">
+        <div class = "logo"><img src="img/logo.webp" class="img_logo"></div>
+        <div class="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/list">Товары</a></li>
+            <li><a href="/cart">Корзина</a></li>
+            <li><a href="/login">Вход</a></li>
+            <li><a href="/profile">Профиль</a></li>
+        </ul>
+    </header>
+    <div class="cart-container">
+        <h1>Корзина</h1>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="product1.jpg" alt="Товар 1" class="cart-item-img">
+                <div class="cart-item-info">
+                    <h2>Товар 1</h2>
+                    <p>Цена: 1000₽</p>
+                </div>
+                <div class="cart-item-price">1000₽</div>
+                <button class="remove-item">Удалить</button>
+            </div>
+            <div class="cart-item">
+                <img src="product2.jpg" alt="Товар 2" class="cart-item-img">
+                <div class="cart-item-info">
+                    <h2>Товар 2</h2>
+                    <p>Цена: 2000₽</p>
+                </div>
+                <div class="cart-item-price">2000₽</div>
+                <button class="remove-item">Удалить</button>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <p class="total-price">Итого: 3000₽</p>
+            <button class="checkout-btn">Перейти к оплате</button>
+        </div>
+    </div>
+    <script src="scripts/script_cart.js"></script>
+</body>
+</html>

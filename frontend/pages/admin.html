@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель</title>
+    <link rel="stylesheet" href="style/style_admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Админ панель</h1>
+
+        <div class="order-status">
+            <h2>Изменить статус заказа</h2>
+            <form action="#" method="POST">
+                <label for="orderId">ID заказа:</label>
+                <input type="text" id="orderId" name="orderId" placeholder="Введите ID заказа" required>
+
+                <label for="orderStatus">Статус:</label>
+                <select id="orderStatus" name="orderStatus" required>
+                    <option value="processing">В обработке</option>
+                    <option value="shipped">Отправлен</option>
+                    <option value="delivered">Доставлен</option>
+                    <option value="cancelled">Отменён</option>
+                </select>
+
+                <button type="submit">Изменить статус</button>
+            </form>
+        </div>
+
+        <div class="add-product">
+            <h2>Добавить товар</h2>
+            <form action='/api/add-product' method="POST">
+                <label for="productName">Название товара:</label>
+                <input type="text" id="productName" name="productName" placeholder="Введите название товара" required>
+
+                <label for="productDescription">Описание:</label>
+                <textarea id="productDescription" name="productDescription" placeholder="Введите описание товара" required></textarea>
+
+                <label for="productPrice">Цена:</label>
+                <input type="number" id="productPrice" name="productPrice" placeholder="Введите цену товара" required>
+
+                <label for="productImage">Ссылка на изображение (URL):</label>
+                <input type="text" id="productImage" name="productImage" placeholder="Введите ссылку на изображение товара" required>
+
+                <button type="submit">Добавить товар</button>
+            </form>
+        </div>
+
+
+        <div class="delete-product">
+            <h2>Удалить товар</h2>
+            <form action="#" method="POST">
+                <label for="productId">ID товара:</label>
+                <input type="text" id="productId" name="productId" placeholder="Введите ID товара для удаления" required>
+
+                <button type="submit">Удалить товар</button>
+            </form>
+        </div>
+
+        <div class="orders-table">
+            <h2>Список заказов</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID заказа</th>
+                        <th>Имя покупателя</th>
+                        <th>Статус</th>
+                        <th>Дата заказа</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Иван Иванов</td>
+                        <td>В обработке</td>
+                        <td>2025-03-10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Мария Петрова</td>
+                        <td>Отправлен</td>
+                        <td>2025-03-12</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Алексей Смирнов</td>
+                        <td>Доставлен</td>
+                        <td>2025-03-13</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button id="logout">Выйти</button>
+    </div>
+    <script src="scripts/script_admin.js"></script>
+</body>
+</html>
